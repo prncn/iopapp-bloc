@@ -1,0 +1,53 @@
+-- drop table if exists addresses cascade;
+-- drop table if exists devices cascade;
+-- drop table if exists orders cascade;
+-- drop table if exists paymentMethods cascade;
+-- drop table if exists shops cascade;
+-- drop table if exists smartOrders cascade;
+-- create table if not exists addresses (
+--     id char(36) primary key,
+--     firstName varchar(80),
+--     lastName varchar(80),
+--     streetName varchar(80),
+--     streetNo int,
+--     postCode int,
+--     city varchar(80)
+-- );
+-- create table if not exists devices (
+--     id char(36) primary key,
+--     haId varchar(80),
+--     name varchar(80),
+--     description varchar(80)
+-- );
+-- create table if not exists orders (
+--     id char(36) primary key,
+--     price int,
+--     smartOrderId char(36),
+--     date timestamp default current_date
+-- );
+-- create table if not exists paymentMethods (
+--     id char(36) primary key,
+--     type varchar(80),
+--     details varchar(80)
+-- );
+-- create table if not exists shops (
+--     id char(36) primary key,
+--     name varchar(80),
+--     isRefused boolean
+-- );
+-- create table if not exists smartOrders (
+--     id char(36) primary key,
+--     productName varchar(80),
+--     productCategory varchar(80),
+--     linkedTo varchar(80) references devices(id),
+--     unitPrice int,
+--     monthlyLimit int,
+--     merchant varchar(80) references shops(id),
+--     paymentMethod varchar(80) references paymentMethods(id),
+--     address varchar(80) references addresses(id),
+--     isLowSupplyNotificaton boolean,
+--     isAutomaticOrdering boolean,
+--     isPaused boolean
+-- );
+-- alter table orders
+-- add foreign key (smartOrderId) references smartOrders(id)
