@@ -1,0 +1,7 @@
+org\cgi\models\Shop.class
+org\cgi\models\Device.class
+org\cgi\models\PaymentMethod.class
+org\cgi\IoPResource.class
+org\cgi\models\Address.class
+org\cgi\models\SmartOrder.class
+org\cgi\models\Order.class
