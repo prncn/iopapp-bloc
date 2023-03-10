@@ -4,7 +4,8 @@
   "metadata" : {
     "annotations" : {
       "app.openshift.io/vcs-url" : "<<unknown>>",
-      "app.quarkus.io/build-timestamp" : "2022-12-07 - 21:17:22 +0000"
+      "app.quarkus.io/commit-id" : "6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f",
+      "app.quarkus.io/build-timestamp" : "2023-02-20 - 12:12:54 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "iopapp-bloc",
@@ -31,7 +32,8 @@
   "metadata" : {
     "annotations" : {
       "app.openshift.io/vcs-url" : "<<unknown>>",
-      "app.quarkus.io/build-timestamp" : "2022-12-07 - 21:17:22 +0000"
+      "app.quarkus.io/commit-id" : "6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f",
+      "app.quarkus.io/build-timestamp" : "2023-02-20 - 12:12:54 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "iopapp-bloc",
@@ -49,10 +51,10 @@
       "app.kubernetes.io/name" : "iopapp-bloc",
       "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
     },
-    "name" : "openjdk-11"
+    "name" : "s2i-java"
   },
   "spec" : {
-    "dockerImageRepository" : "registry.access.redhat.com/ubi8/openjdk-11"
+    "dockerImageRepository" : "fabric8/s2i-java"
   }
 },{
   "apiVersion" : "build.openshift.io/v1",
@@ -60,7 +62,8 @@
   "metadata" : {
     "annotations" : {
       "app.openshift.io/vcs-url" : "<<unknown>>",
-      "app.quarkus.io/build-timestamp" : "2022-12-07 - 21:17:22 +0000"
+      "app.quarkus.io/commit-id" : "6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f",
+      "app.quarkus.io/build-timestamp" : "2023-02-20 - 12:12:54 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "iopapp-bloc",
@@ -83,7 +86,7 @@
       "sourceStrategy" : {
         "from" : {
           "kind" : "ImageStreamTag",
-          "name" : "openjdk-11:1.11"
+          "name" : "s2i-java:2.3"
         }
       }
     }
@@ -94,7 +97,8 @@
   "metadata" : {
     "annotations" : {
       "app.openshift.io/vcs-url" : "<<unknown>>",
-      "app.quarkus.io/build-timestamp" : "2022-12-07 - 21:17:22 +0000"
+      "app.quarkus.io/commit-id" : "6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f",
+      "app.quarkus.io/build-timestamp" : "2023-02-20 - 12:12:54 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "iopapp-bloc",
@@ -106,14 +110,15 @@
   "spec" : {
     "replicas" : 1,
     "selector" : {
-      "app.kubernetes.io/name" : "iopapp-bloc",
-      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
+      "app.kubernetes.io/name" : "iopapp-bloc"
     },
     "template" : {
       "metadata" : {
         "annotations" : {
           "app.openshift.io/vcs-url" : "<<unknown>>",
-          "app.quarkus.io/build-timestamp" : "2022-12-07 - 21:17:22 +0000"
+          "app.quarkus.io/commit-id" : "6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f",
+          "app.quarkus.io/build-timestamp" : "2023-02-20 - 12:12:54 +0000"
         },
         "labels" : {
           "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
@@ -123,7 +128,6 @@
       },
       "spec" : {
         "containers" : [ {
-          "command" : [ "java", "-jar", "/deployments/quarkus-run.jar" ],
           "env" : [ {
             "name" : "KUBERNETES_NAMESPACE",
             "valueFrom" : {
@@ -133,7 +137,7 @@
             }
           }, {
             "name" : "JAVA_APP_JAR",
-            "value" : "/deployments/quarkus-run.jar"
+            "value" : "/deployments/iopapp-bloc-1.0.0-SNAPSHOT-runner.jar"
           } ],
           "image" : "princen.vijayakumar/iopapp-bloc:1.0.0-SNAPSHOT",
           "imagePullPolicy" : "Always",

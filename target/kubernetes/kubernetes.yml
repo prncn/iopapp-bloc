@@ -3,7 +3,8 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: 2022-12-07 - 21:17:22 +0000
+    app.quarkus.io/commit-id: 6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f
+    app.quarkus.io/build-timestamp: 2023-02-20 - 12:12:54 +0000
   labels:
     app.kubernetes.io/name: iopapp-bloc
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
@@ -22,7 +23,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: 2022-12-07 - 21:17:22 +0000
+    app.quarkus.io/commit-id: 6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f
+    app.quarkus.io/build-timestamp: 2023-02-20 - 12:12:54 +0000
   labels:
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
     app.kubernetes.io/name: iopapp-bloc
@@ -36,23 +38,18 @@ spec:
   template:
     metadata:
       annotations:
-        app.quarkus.io/build-timestamp: 2022-12-07 - 21:17:22 +0000
+        app.quarkus.io/commit-id: 6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f
+        app.quarkus.io/build-timestamp: 2023-02-20 - 12:12:54 +0000
       labels:
         app.kubernetes.io/version: 1.0.0-SNAPSHOT
         app.kubernetes.io/name: iopapp-bloc
     spec:
       containers:
-        - command:
-            - java
-            - -jar
-            - /deployments/quarkus-run.jar
-          env:
+        - env:
             - name: KUBERNETES_NAMESPACE
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
-            - name: JAVA_APP_JAR
-              value: /deployments/quarkus-run.jar
           image: princen.vijayakumar/iopapp-bloc:1.0.0-SNAPSHOT
           imagePullPolicy: Always
           name: iopapp-bloc

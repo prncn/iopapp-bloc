@@ -18,6 +18,7 @@ import org.cgi.models.Order;
 import org.cgi.models.PaymentMethod;
 import org.cgi.models.Shop;
 import org.cgi.models.SmartOrder;
+import org.jboss.resteasy.reactive.ResponseStatus;
 
 @Path("/api")
 public class IoPResource {
@@ -35,7 +36,7 @@ public class IoPResource {
     IoPResource() {
         // Devices
         Device coffeeMachine = new Device("4d490d79-5807-4a91-a3cd-64086d39411f", "HA_ID", "Coffee Machine",
-                "KEURIG K-Supreme Plus SMART", "Coffe Maker", null);
+                "KEURIG K-Supreme Plus SMART", "Coffee Maker", null);
         Device printer = new Device("65493ee9-24a8-425a-a89e-e5ac9ef02407", "HA_ID", "Printer", "HP DeskJet 4120e",
                 "Printer", null);
 
@@ -119,6 +120,7 @@ public class IoPResource {
     }
 
     @GET
+    @ResponseStatus(200)
     @Path("/orders")
     public List<Order> getOrders() {
         return orders;
