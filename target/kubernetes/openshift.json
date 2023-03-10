@@ -5,7 +5,7 @@
     "annotations" : {
       "app.openshift.io/vcs-url" : "<<unknown>>",
       "app.quarkus.io/commit-id" : "6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f",
-      "app.quarkus.io/build-timestamp" : "2023-02-20 - 12:12:54 +0000"
+      "app.quarkus.io/build-timestamp" : "2023-03-10 - 12:45:17 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "iopapp-bloc",
@@ -33,7 +33,7 @@
     "annotations" : {
       "app.openshift.io/vcs-url" : "<<unknown>>",
       "app.quarkus.io/commit-id" : "6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f",
-      "app.quarkus.io/build-timestamp" : "2023-02-20 - 12:12:54 +0000"
+      "app.quarkus.io/build-timestamp" : "2023-03-10 - 12:45:17 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "iopapp-bloc",
@@ -63,7 +63,7 @@
     "annotations" : {
       "app.openshift.io/vcs-url" : "<<unknown>>",
       "app.quarkus.io/commit-id" : "6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f",
-      "app.quarkus.io/build-timestamp" : "2023-02-20 - 12:12:54 +0000"
+      "app.quarkus.io/build-timestamp" : "2023-03-10 - 12:45:17 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "iopapp-bloc",
@@ -98,7 +98,7 @@
     "annotations" : {
       "app.openshift.io/vcs-url" : "<<unknown>>",
       "app.quarkus.io/commit-id" : "6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f",
-      "app.quarkus.io/build-timestamp" : "2023-02-20 - 12:12:54 +0000"
+      "app.quarkus.io/build-timestamp" : "2023-03-10 - 12:45:17 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "iopapp-bloc",
@@ -110,19 +110,19 @@
   "spec" : {
     "replicas" : 1,
     "selector" : {
-      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
-      "app.kubernetes.io/name" : "iopapp-bloc"
+      "app.kubernetes.io/name" : "iopapp-bloc",
+      "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
     },
     "template" : {
       "metadata" : {
         "annotations" : {
           "app.openshift.io/vcs-url" : "<<unknown>>",
           "app.quarkus.io/commit-id" : "6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f",
-          "app.quarkus.io/build-timestamp" : "2023-02-20 - 12:12:54 +0000"
+          "app.quarkus.io/build-timestamp" : "2023-03-10 - 12:45:17 +0000"
         },
         "labels" : {
-          "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
           "app.kubernetes.io/name" : "iopapp-bloc",
+          "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
           "app.openshift.io/runtime" : "quarkus"
         }
       },
