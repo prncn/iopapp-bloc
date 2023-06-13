@@ -28,8 +28,9 @@ public class Credentials {
     private String scope;
     private String id_token;
 
+    private static int SECONDS_PER_DAY = 86400;
+
     public boolean hasExpired() {
-        int SECONDS_PER_DAY = 86400;
         double secondsSinceEpoch = LocalDate.now().toEpochDay() * SECONDS_PER_DAY;
         return (created_at + expires_in < secondsSinceEpoch);
     }
@@ -53,5 +54,10 @@ public class Credentials {
         Credentials credentials = new ObjectMapper().readValue(body, Credentials.class);
 
         return credentials;
+    }
+
+    public static Credentials createEmptyCredential() {
+        return new Credentials("null", "Bearer", LocalDate.now().toEpochDay() * SECONDS_PER_DAY, 86400, "null", "null",
+                "null");
     }
 }

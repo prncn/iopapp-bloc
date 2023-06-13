@@ -4,8 +4,8 @@ kind: Service
 metadata:
   annotations:
     app.openshift.io/vcs-url: <<unknown>>
-    app.quarkus.io/commit-id: 6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f
-    app.quarkus.io/build-timestamp: 2023-03-10 - 12:45:17 +0000
+    app.quarkus.io/commit-id: c59e3234d970bc0dbd2057d275a900da07500352
+    app.quarkus.io/build-timestamp: 2023-06-13 - 12:59:00 +0000
   labels:
     app.kubernetes.io/name: iopapp-bloc
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
@@ -26,8 +26,8 @@ kind: ImageStream
 metadata:
   annotations:
     app.openshift.io/vcs-url: <<unknown>>
-    app.quarkus.io/commit-id: 6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f
-    app.quarkus.io/build-timestamp: 2023-03-10 - 12:45:17 +0000
+    app.quarkus.io/commit-id: c59e3234d970bc0dbd2057d275a900da07500352
+    app.quarkus.io/build-timestamp: 2023-06-13 - 12:59:00 +0000
   labels:
     app.kubernetes.io/name: iopapp-bloc
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
@@ -50,8 +50,8 @@ kind: BuildConfig
 metadata:
   annotations:
     app.openshift.io/vcs-url: <<unknown>>
-    app.quarkus.io/commit-id: 6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f
-    app.quarkus.io/build-timestamp: 2023-03-10 - 12:45:17 +0000
+    app.quarkus.io/commit-id: c59e3234d970bc0dbd2057d275a900da07500352
+    app.quarkus.io/build-timestamp: 2023-06-13 - 12:59:00 +0000
   labels:
     app.kubernetes.io/name: iopapp-bloc
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
@@ -75,8 +75,8 @@ kind: DeploymentConfig
 metadata:
   annotations:
     app.openshift.io/vcs-url: <<unknown>>
-    app.quarkus.io/commit-id: 6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f
-    app.quarkus.io/build-timestamp: 2023-03-10 - 12:45:17 +0000
+    app.quarkus.io/commit-id: c59e3234d970bc0dbd2057d275a900da07500352
+    app.quarkus.io/build-timestamp: 2023-06-13 - 12:59:00 +0000
   labels:
     app.kubernetes.io/name: iopapp-bloc
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
@@ -85,17 +85,17 @@ metadata:
 spec:
   replicas: 1
   selector:
-    app.kubernetes.io/name: iopapp-bloc
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
+    app.kubernetes.io/name: iopapp-bloc
   template:
     metadata:
       annotations:
         app.openshift.io/vcs-url: <<unknown>>
-        app.quarkus.io/commit-id: 6f3125fd5880627d3a190c5f8bfe1ad3f4f7a05f
-        app.quarkus.io/build-timestamp: 2023-03-10 - 12:45:17 +0000
+        app.quarkus.io/commit-id: c59e3234d970bc0dbd2057d275a900da07500352
+        app.quarkus.io/build-timestamp: 2023-06-13 - 12:59:00 +0000
       labels:
-        app.kubernetes.io/name: iopapp-bloc
         app.kubernetes.io/version: 1.0.0-SNAPSHOT
+        app.kubernetes.io/name: iopapp-bloc
         app.openshift.io/runtime: quarkus
     spec:
       containers:

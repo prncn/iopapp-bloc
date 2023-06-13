@@ -44,7 +44,8 @@ public class HomeConnectAdapter {
   @Path("authorized")
   public Credentials isClientAuthorized() throws IOException, InterruptedException {
     if (HOME_CONNECT_TOKEN == null) {
-      return null;
+      // TODO Handle empty credentials correctly
+      return Credentials.createEmptyCredential();
     }
 
     if (HOME_CONNECT_TOKEN.hasExpired()) {
